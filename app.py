@@ -3,7 +3,7 @@ from marshmallow import ValidationError
 
 from ma import ma
 from db import db
-from controllers.book import Book
+from controllers.book import Book, BookList
 from server.instance import server
 
 api = server.api
@@ -20,5 +20,8 @@ if __name__ == '__main__':
 
 
     api.add_resource(Book,'/books/<int:id>' )
-    # inicia o servidor
+    api.add_resource(BookList, '/books')
+
+   
+        # inicia o servidor
     server.run()
