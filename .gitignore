@@ -1,0 +1,39 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# Ignorar ambiente virtual
+env/
+.venv/
+venv/
+
+# Arquivos Python compilados
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Bancos de dados SQLite
+*.db
+*.sqlite3
+
+# Configurações de IDE/Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Testes
+.coverage
+htmlcov/
+*.pytest_cache/
+*.tox/
+
+# Pacotes
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
