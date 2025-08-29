@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Books API - MVP</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1>📚 Livros</h1>
+
+  <!-- Tabela -->
+  <table id="booksTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Páginas</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Formulário para adicionar -->
+  <h2>Adicionar Novo Livro</h2>
+  <form id="bookForm">
+    <input type="text" id="title" placeholder="Título" required>
+    <input type="text" id="author" placeholder="Autor" required>
+    <input type="number" id="pages" placeholder="Páginas" min="1" required>
+    <button type="submit">Adicionar</button>
+  </form>
+
+</body>
+</html>

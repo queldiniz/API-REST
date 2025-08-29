@@ -69,5 +69,6 @@ class BookList(Resource):
 
 
 # Registrando as rotas
-book_ns.add_resource(BookList, "/books")
-book_ns.add_resource(Book, "/books/<int:id>")
+book_ns.add_resource(BookList, "")
+book_ns.add_resource(Book, "/<int:id>")
+

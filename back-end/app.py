@@ -1,5 +1,6 @@
 from flask import jsonify
 from marshmallow import ValidationError
+from flask_cors import CORS
 
 from ma import ma
 from db import db
@@ -18,10 +19,12 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()
 
-
-    api.add_resource(Book,'/books/<int:id>' )
+    # registra as rotas da API
+    api.add_resource(Book, '/books/<int:id>')
     api.add_resource(BookList, '/books')
 
-   
-        # inicia o servidor
-    server.run()
+    # habilita CORS
+    CORS(app)
+
+    # inicia o servidor Flask
+    app.run(debug=True, port=5000)
