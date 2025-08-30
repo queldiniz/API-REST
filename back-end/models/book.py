@@ -6,19 +6,21 @@ class BookModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80), nullable=False, unique=True)
     pages = db.Column(db.Integer, nullable=False)
-    
+    author = db.Column(db.String(80), nullable=True)
 
-    def __init__(self, title, pages):
+    def __init__(self, title, pages, author):
         self.title = title
         self.pages = pages
+        self.author = author
 
     def __repr__(self):
-        return f'BookModel(title={self.title}, pages={self.pages})'
-    
+        return f'BookModel(title={self.title}, pages={self.pages}, author={self.author})'
+
     def json(self, ):
         return {
             'title': self.title,
-            'pages': self.pages
+            'pages': self.pages,
+            'author': self.author
         }
     
     # metodos da classe BookModel
