@@ -17,19 +17,20 @@
         <th>Título</th>
         <th>Autor</th>
         <th>Páginas</th>
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody></tbody>
   </table>
 
-  <!-- Formulário para adicionar -->
-  <h2>Adicionar Novo Livro</h2>
+  <!-- Formulário -->
+  <h2 id="formTitle">Adicionar Novo Livro</h2>
   <form id="bookForm">
     <input type="text" id="title" placeholder="Título" required>
     <input type="text" id="author" placeholder="Autor" required>
     <input type="number" id="pages" placeholder="Páginas" min="1" required>
-    <button type="submit">Adicionar</button>
+    <button type="submit">Salvar</button>
+    <button type="button" id="cancelEdit" style="display:none;">Cancelar</button>
   </form>
-
 </body>
 </html>
