@@ -13,6 +13,7 @@ books_schema = BookSchema(many=True)
 item = book_ns.model('Book', {
     'title': fields.String(required=True, description='The title of the book'),
     'pages': fields.Integer(default=0, description='The number of pages in the book'),
+    'author': fields.String(description='The author of the book')
 })
 
 
